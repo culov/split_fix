@@ -356,7 +356,7 @@ module Split
       beta_params.each do |alternative, params|
         alpha = params[0]
         beta = params[1]
-        simulated_conversion_rate = rand.beta(alpha, beta)
+        simulated_conversion_rate = rand.beta(alpha.abs, beta.abs)
         simulated_cr_hash[alternative] = simulated_conversion_rate
       end
 
